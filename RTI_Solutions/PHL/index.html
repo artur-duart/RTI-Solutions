@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Aluno</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form method="POST" action="calcular.php">
+        <p>Calculadora de Fretes</p>
+
+            <label for="cidadeOrigem">
+                Cidade de Origem
+                <input type="text" id="cidadeOrigem" name="cidadeOrigem">
+            </label>
+
+            <label for="cidadeDestino">
+                Cidade de Destino
+                <input type="text" id="cidadeDestino" name="cidadeDestino">
+            </label>
+
+        <label for="distancia">
+            Distância (em KM)
+            <input type="number" min="0" id="distancia" name="distancia">
+        </label>
+
+        <label for="pedagios">
+            Quantidade de Pedágios
+            <input type="number" min="0" id="pedagios" name="pedagios">
+        </label>
+
+
+        <button>Cadastrar</button>
+
+    </form>
+
+</body>
+
+</html>
