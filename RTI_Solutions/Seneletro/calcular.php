@@ -18,6 +18,8 @@ if (isset($_POST["nomeCompleto"]) && isset($_POST["endereco"]) && isset($_POST["
     }
 
     $totalConta= number_format((float)$totalContaBruto, 2, ',' , '');  
+} else {
+    echo "ERRO AO ENVIAR FORMULÁRIO!";
 }
 
 ?>
