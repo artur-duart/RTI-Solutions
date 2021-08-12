@@ -43,7 +43,7 @@ label:focus-within {
 
 }
 
-.texto{
+.texto {
     font-size: 1.1875rem;
     color: #404040;
     padding: 1rem 0 0.5rem 0;
@@ -56,13 +56,17 @@ label:focus-within {
     transition: 0.15s linear;
 }
 
+input[type="radio"] {
+    margin-right: 5px;
+}
+
 .texto:focus {
     outline: none;
     border-color: #c83d3d;
 }
 
-.generos label{
-    padding: 0px 3px;   
+.generos label {
+    padding: 0px 1px;
 }
 
 #cargosLabel {
@@ -109,4 +113,10 @@ button:focus {
     outline: none;
     background: #c83d3d;
     color: #fff;
+}
+
+#total {
+    font-size: 25px;
+    font-weight: bold;
+    resize: none;
 }

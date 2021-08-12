@@ -20,27 +20,27 @@
 
             <label for="salario">
                 Salário (em R$)
-                <input class="texto" type="text" id="salario" name="salario" required>
+                <input class="texto" type="number" id="salario" name="salario" required>
             </label>
 
         <div class="generos">
             <label>Gênero:</label>
             <label for="masculino">
-                <input type="radio" id="masculino" name="genero" value="masculino">Masculino
+                <input type="radio" id="masculino" name="genero" value="Masculino" required>Masculino
             </label>
 
             <label for="feminino">
-                <input type="radio" id="feminino" name="genero" value="feminino">Feminino
+                <input type="radio" id="feminino" name="genero" value="Feminino">Feminino
             </label>
 
             <label for="outros">
-                <input type="radio" id="outros" name="genero" value="outros">Outros
+                <input type="radio" id="outros" name="genero" value="Outros">Outros
             </label>
         </div>
 
         <label id="cargosLabel" for="cargos">
             Cargos
-            <select id="cargos" name="cargos">
+            <select id="cargos" name="cargos" required>
                 <option id="selecione" selected disabled value="">Selecione</option>
                 <option value="Gerente de Vendas">Gerente de Vendas</option>
                 <option value="Gerente de Marketing">Gerente de Marketing</option>
