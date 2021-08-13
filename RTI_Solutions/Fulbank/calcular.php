@@ -1,6 +1,6 @@
 <?php
 
-if (isset($_POST["nome"]) && isset($_POST["salario"]) && isset($_POST["genero"]) && isset($_POST["cargos"])){
+if (isset($_POST["nome"]) && isset($_POST["salario"]) && isset($_POST["genero"]) && isset($_POST["cargos"])) {
 
     $nome = $_POST["nome"];
     $salario = $_POST["salario"];
@@ -12,9 +12,8 @@ if (isset($_POST["nome"]) && isset($_POST["salario"]) && isset($_POST["genero"])
     } else {
         $novoSalario = ((20 / 100) * $salario) + $salario;
     }
-
 } else {
-    echo "ERRO AO ENVIAR FORMULÁRIO!";
+    die("<h1>ERRO AO ENVIAR FORMULÁRIO!</h1>");
 }
 
 ?>
@@ -26,7 +25,7 @@ if (isset($_POST["nome"]) && isset($_POST["salario"]) && isset($_POST["genero"])
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Fretes</title>
+    <title>Calculadora de Aumento Salarial</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -47,22 +46,22 @@ if (isset($_POST["nome"]) && isset($_POST["salario"]) && isset($_POST["genero"])
         <div class="generos">
             <label>Gênero:</label>
             <label for="masculino">
-                <input type="radio"  name="genero" checked value="<?= $genero ?>"><?= $genero ?>
-            </label> 
+                <input type="radio" name="genero" checked value="<?= $genero ?>"><?= $genero ?>
+            </label>
 
             <br>
             <br>
             <br>
 
-        <label id="cargosLabel" for="cargos">
-            Cargos
-            <select id="cargos" name="cargos" disabled>
-                <option id="selecione" selected value=""><?= $cargos ?></option>
-            </select>
-        </label>
+            <label id="cargosLabel" for="cargos">
+                Cargos
+                <select id="cargos" name="cargos" disabled>
+                    <option id="selecione" selected value=""><?= $cargos ?></option>
+                </select>
+            </label>
 
 
-        <textarea id="total" cols="22" rows="4" readonly>Parabéns <?= $nome ?>! Você passará a receber R$<?= $novoSalario ?> no cargo de <?= $cargos ?>!</textarea>
+            <textarea id="total" cols="22" rows="4" readonly>Parabéns <?= $nome ?>! Você passará a receber R$<?= $novoSalario ?> no cargo de <?= $cargos ?>!</textarea>
 
     </form>
 
