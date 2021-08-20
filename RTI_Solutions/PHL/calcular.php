@@ -9,7 +9,7 @@ if (isset($_POST["cidadeOrigem"]) && isset($_POST["cidadeDestino"]) && isset($_P
     $totalViagemBruto = ($pedagios * 9.40) +  ($distancia * 6);
     $totalViagem = number_format((float)$totalViagemBruto, 2, ',' , '');  
 } else {
-    echo "ERRO AO ENVIAR FORMULÁRIO!";
+    die("<h1>ERRO AO ENVIAR FORMULÁRIO!</h1>");
 }
 
 ?>

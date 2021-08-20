@@ -1,3 +1,26 @@
+<?php 
+
+$cargos = [
+    "Gerente de Vendas",
+    "Gerente de Marketing",
+    "Gerente de Contratos",
+    "Gerente de Cobrança",
+    "Gerente de Produção",
+    "Gerente de Compras",
+];
+
+//adicionando um elemento no vetor
+$cargos[] = "Gerente Administrativo";
+$cargos[] = "Gerente Financeiro";
+$cargos[] = "Gerente Comercial";
+$cargos[] = "Gerente de RH";
+
+//iprimindo um vetor na tela
+// print_r($cargos);
+
+// die;
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -42,12 +65,12 @@
             Cargos
             <select id="cargos" name="cargos" required>
                 <option id="selecione" selected disabled value="">Selecione</option>
-                <option value="Gerente de Vendas">Gerente de Vendas</option>
-                <option value="Gerente de Marketing">Gerente de Marketing</option>
-                <option value="Gerente de Contratos">Gerente de Contratos</option>
-                <option value="Gerente de Cobrança">Gerente de Cobrança</option>
-                <option value="Gerente de Produção">Gerente de Produção</option>
-                <option value="Gerente de Compras">Gerente de Compras</option>
+                
+                <?php
+                    foreach($cargos as $cargo){
+                        echo "<option>$cargo</option>";
+                    }
+                ?>
             </select>
         </label>
 
